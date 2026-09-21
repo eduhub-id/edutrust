@@ -1,0 +1,412 @@
+{
+  "_catatan": "SUMBER KEBENARAN TUNGGAL untuk data contoh di Ruang Coba. Ubah di sini, jalankan `node build-demo.js`, seluruh layar ikut berubah. Semua nama & angka fiktif.",
+  "_versi": "1.0",
+  "_terakhir_diubah": "2026-09-20",
+  "program": {
+    "nama_angkatan": "Angkatan 2026",
+    "periode_berjalan": "Semester 3 · 2027",
+    "jumlah_pelajar_aktif": 128,
+    "jumlah_alumni": 41
+  },
+  "sumber_dana": [
+    {
+      "id": "baznas",
+      "nama": "BAZNAS",
+      "jenis": "Zakat",
+      "wajib_kembali": false,
+      "rekening": "•••• 4471",
+      "warna": "hijau"
+    },
+    {
+      "id": "sinarmas",
+      "nama": "PT Sinar Mas",
+      "jenis": "CSR",
+      "wajib_kembali": false,
+      "rekening": "•••• 7732",
+      "warna": "biru"
+    },
+    {
+      "id": "aceh",
+      "nama": "Baitul Mal Aceh",
+      "jenis": "Zakat",
+      "wajib_kembali": false,
+      "rekening": "•••• 9014",
+      "warna": "hijau"
+    },
+    {
+      "id": "deposito",
+      "nama": "PT Karya Nusa",
+      "jenis": "Titipan perusahaan",
+      "wajib_kembali": true,
+      "rekening": "•••• 2208",
+      "warna": "kuning"
+    },
+    {
+      "id": "astra",
+      "nama": "PT Astra",
+      "jenis": "CSR",
+      "wajib_kembali": false,
+      "rekening": "•••• 5518",
+      "warna": "biru"
+    }
+  ],
+  "institusi": [
+    {
+      "id": "titech",
+      "nama": "Tokyo Institute of Technology",
+      "nama_pendek": "Tokyo Inst. of Tech",
+      "negara": "Jepang",
+      "bendera": "🇯🇵",
+      "bank": "MUFG Bank",
+      "rekening": "•••• 8821"
+    },
+    {
+      "id": "mingchuan",
+      "nama": "Ming Chuan University",
+      "nama_pendek": "Ming Chuan Univ.",
+      "negara": "Taiwan",
+      "bendera": "🇹🇼",
+      "bank": "CTBC Bank",
+      "rekening": "•••• 3190"
+    },
+    {
+      "id": "housing",
+      "nama": "Tokyo Student Housing",
+      "nama_pendek": "Tokyo Student Housing",
+      "negara": "Jepang",
+      "bendera": "🇯🇵",
+      "bank": "MUFG Bank",
+      "rekening": "•••• 5503"
+    },
+    {
+      "id": "osaka",
+      "nama": "Osaka Vocational College",
+      "nama_pendek": "Osaka Vocational",
+      "negara": "Jepang",
+      "bendera": "🇯🇵",
+      "bank": "MUFG Bank",
+      "rekening": "•••• 6642"
+    }
+  ],
+  "pelajar_utama": {
+    "id": "rizki",
+    "nama": "Rizki Maulana",
+    "identitas": {
+      "jenis": "Paspor",
+      "nomor": "C4471882"
+    },
+    "institusi_id": "titech",
+    "angkatan": 2026,
+    "status": "Aktif",
+    "semester_berjalan": 3,
+    "pagu_total": 100000000,
+    "sudah_cair": 50000000,
+    "sisa_pagu": 50000000,
+    "tahap_selesai": 2,
+    "tahap_total": 4,
+    "biaya_hidup_bulanan": 4500000,
+    "tahapan": [
+      {
+        "no": 1,
+        "periode": "Sem 1 · 2026",
+        "jumlah": 25000000,
+        "sumber_id": "baznas",
+        "status": "cair",
+        "label_status": "Sudah cair"
+      },
+      {
+        "no": 2,
+        "periode": "Sem 2 · 2026",
+        "jumlah": 25000000,
+        "sumber_id": "baznas",
+        "status": "cair",
+        "label_status": "Sudah cair"
+      },
+      {
+        "no": 3,
+        "periode": "Sem 3 · 2027",
+        "jumlah": 25000000,
+        "sumber_id": "sinarmas",
+        "status": "tertahan",
+        "label_status": "Tunggu syarat akademik"
+      },
+      {
+        "no": 4,
+        "periode": "Sem 4 · 2027",
+        "jumlah": 25000000,
+        "sumber_id": "sinarmas",
+        "status": "belum",
+        "label_status": "Belum jatuh tempo"
+      }
+    ],
+    "tagihan_berjalan": {
+      "untuk": "SPP Semester 3",
+      "institusi_id": "titech",
+      "nominal_asing": "¥ 248.000",
+      "nominal_rupiah": 25040000,
+      "sumber_id": "sinarmas",
+      "tahap_no": 3,
+      "nomor_invoice": "INV/TIT/2027/0431"
+    },
+    "pemeriksaan": [
+      {
+        "nama": "Pagu mencukupi",
+        "lolos": true,
+        "ket": "Sisa Rp 50 jt · tagihan Rp 25 jt"
+      },
+      {
+        "nama": "Rekening penerima terdaftar",
+        "lolos": true,
+        "ket": "Tokyo Institute of Technology · terverifikasi"
+      },
+      {
+        "nama": "Tagihan resmi institusi",
+        "lolos": true,
+        "ket": "INV/TIT/2027/0431 diterima 18 Sep 2026"
+      },
+      {
+        "nama": "Syarat akademik semester 2",
+        "lolos": false,
+        "ket": "Transkrip Semester 2 belum masuk dari kampus"
+      }
+    ],
+    "syarat_akademik": [
+      {
+        "nama": "Surat keterangan aktif",
+        "status": "lolos",
+        "ket": "Dikirim langsung oleh kampus"
+      },
+      {
+        "nama": "Kehadiran 91%",
+        "status": "lolos",
+        "ket": "Otomatis dari portal kampus"
+      },
+      {
+        "nama": "Transkrip Semester 2",
+        "status": "menunggu",
+        "ket": "Kampus terbitkan 25 Sep"
+      }
+    ],
+    "riwayat": [
+      {
+        "tanggal": "14 Sep 2026",
+        "uraian": "SPP Semester 2",
+        "penerima": "Tokyo Institute of Technology",
+        "jumlah": 25000000,
+        "sumber_id": "baznas",
+        "bukti": "invoice",
+        "label": "Lunas — invoice tersedia"
+      },
+      {
+        "tanggal": "01 Sep 2026",
+        "uraian": "Biaya hidup September",
+        "penerima": "rekening pribadi",
+        "jumlah": 4500000,
+        "sumber_id": "baznas",
+        "bukti": "sekaligus",
+        "label": "Diterima"
+      },
+      {
+        "tanggal": "28 Agu 2026",
+        "uraian": "Asrama 6 bulan",
+        "penerima": "Tokyo Student Housing",
+        "jumlah": 9200000,
+        "sumber_id": "sinarmas",
+        "bukti": "invoice",
+        "label": "Lunas — invoice tersedia"
+      },
+      {
+        "tanggal": "12 Mar 2026",
+        "uraian": "SPP Semester 1",
+        "penerima": "Tokyo Institute of Technology",
+        "jumlah": 25000000,
+        "sumber_id": "baznas",
+        "bukti": "invoice",
+        "label": "Lunas — invoice tersedia"
+      }
+    ]
+  },
+  "pelajar_lain": [
+    {
+      "nama": "Siti Nurhaliza",
+      "identitas": {
+        "jenis": "Paspor",
+        "nomor": "C5120934"
+      },
+      "institusi_id": "mingchuan",
+      "angkatan": 2026,
+      "status": "Aktif",
+      "pagu_total": 82000000,
+      "sudah_cair": 41000000,
+      "tahap_selesai": 2,
+      "tahap_total": 4,
+      "tagihan_berjalan": {
+        "untuk": "SPP Sem 3",
+        "nominal_rupiah": 20500000,
+        "sumber_id": "baznas",
+        "pemeriksaan_lolos": 4,
+        "pemeriksaan_total": 4
+      }
+    },
+    {
+      "nama": "Ahmad Fauzi",
+      "identitas": {
+        "jenis": "Paspor",
+        "nomor": "C4890211"
+      },
+      "institusi_id": "titech",
+      "angkatan": 2026,
+      "status": "Aktif",
+      "pagu_total": 96000000,
+      "sudah_cair": 48000000,
+      "tahap_selesai": 2,
+      "tahap_total": 4,
+      "tagihan_berjalan": {
+        "untuk": "Asrama 6 bln",
+        "nominal_rupiah": 9200000,
+        "sumber_id": "sinarmas",
+        "pemeriksaan_lolos": 4,
+        "pemeriksaan_total": 4
+      }
+    },
+    {
+      "nama": "Bayu Prasetyo",
+      "identitas": {
+        "jenis": "Paspor",
+        "nomor": "C5033417"
+      },
+      "institusi_id": "mingchuan",
+      "angkatan": 2026,
+      "status": "Aktif",
+      "pagu_total": 64000000,
+      "sudah_cair": 32000000,
+      "tahap_selesai": 2,
+      "tahap_total": 4,
+      "tagihan_berjalan": {
+        "untuk": "SPP Sem 3",
+        "nominal_rupiah": 24000000,
+        "sumber_id": "aceh",
+        "pemeriksaan_lolos": 4,
+        "pemeriksaan_total": 4
+      }
+    },
+    {
+      "nama": "Lia Anggraini",
+      "identitas": {
+        "jenis": "Paspor",
+        "nomor": "C4712250"
+      },
+      "institusi_id": "titech",
+      "angkatan": 2026,
+      "status": "Aktif",
+      "pagu_total": 100000000,
+      "sudah_cair": 25000000,
+      "tahap_selesai": 1,
+      "tahap_total": 4,
+      "tagihan_berjalan": {
+        "untuk": "Biaya hidup",
+        "nominal_rupiah": 12000000,
+        "sumber_id": "deposito",
+        "pemeriksaan_lolos": 4,
+        "pemeriksaan_total": 4
+      }
+    },
+    {
+      "nama": "Nur Aisyah",
+      "identitas": {
+        "jenis": "Paspor",
+        "nomor": "C5211806"
+      },
+      "institusi_id": "osaka",
+      "angkatan": 2026,
+      "status": "Aktif",
+      "pagu_total": 96000000,
+      "sudah_cair": 24000000,
+      "tahap_selesai": 1,
+      "tahap_total": 4,
+      "tagihan_berjalan": {
+        "untuk": "SPP Sem 1",
+        "nominal_rupiah": 24000000,
+        "sumber_id": "astra",
+        "pemeriksaan_lolos": 4,
+        "pemeriksaan_total": 4
+      }
+    }
+  ],
+  "alumni_contoh": {
+    "id": "dewi",
+    "nama": "Dewi Lestari",
+    "keterangan_peran": "Alumni angkatan 2025 — contoh tahap SETELAH lulus",
+    "angkatan": 2025,
+    "negara": "Taiwan",
+    "pemberi_kerja": "PT Hon Hai Precision",
+    "status_ikatan_dinas": "Bekerja",
+    "bulan_berjalan": 14,
+    "bulan_total": 24,
+    "kewajiban": [
+      {
+        "nama": "Bekerja sesuai penempatan",
+        "status": "lolos",
+        "ket": "Terkonfirmasi tiap 3 bulan oleh pemberi kerja"
+      },
+      {
+        "nama": "Kabar berkala",
+        "status": "lolos",
+        "ket": "Sekali per kuartal, lewat aplikasi"
+      }
+    ]
+  },
+  "antrean_persetujuan": {
+    "jumlah_tagihan": 5,
+    "total_nominal": 312000000
+  },
+  "dana_bergulir": {
+    "angkatan_pertama": {
+      "tahun": 2024,
+      "jumlah_pelajar": 40,
+      "dana_awal": 3800000000
+    },
+    "alumni_bekerja": 41,
+    "dana_kembali": 1240000000,
+    "pelajar_didanai_ulang": 13,
+    "putus_kontak": 2,
+    "catatan_kejujuran": "Belum ada satu angkatan pun yang menyelesaikan siklus penuh. Angka pengembalian di bawah ini proyeksi, bukan rekam jejak."
+  },
+  "portal_donatur": {
+    "nama_donatur": "PT Sinar Mas",
+    "jenis": "CSR",
+    "total_disalurkan": 840000000,
+    "jumlah_pelajar_didanai": 34,
+    "biaya_pengelolaan_persen": 8,
+    "periode": "Januari – September 2026",
+    "rincian_penggunaan": [
+      {
+        "kategori": "SPP & biaya kuliah",
+        "persen": 62,
+        "ada_invoice": true
+      },
+      {
+        "kategori": "Asrama",
+        "persen": 19,
+        "ada_invoice": true
+      },
+      {
+        "kategori": "Tiket & visa",
+        "persen": 6,
+        "ada_invoice": true
+      },
+      {
+        "kategori": "Biaya hidup",
+        "persen": 13,
+        "ada_invoice": false
+      }
+    ]
+  },
+  "rekonsiliasi": {
+    "periode": "September 2026",
+    "jumlah_transaksi": 47,
+    "cocok": 46,
+    "selisih": 1,
+    "keterangan_selisih": "Selisih kurs & biaya transfer lintas negara — Rp 41.200"
+  }
+}
