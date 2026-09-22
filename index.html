@@ -29,7 +29,7 @@
     /* ── tipografi: satu skala untuk SELURUH dokumen ── */
     --font:'Inter var','Inter',-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',Roboto,sans-serif;
     --mono:'SF Mono',ui-monospace,'JetBrains Mono',monospace;
-    --t0:11px; --t1:12px; --t2:13px; --t3:14px; --t4:16px; --t5:19px; --t6:24px; --t7:28px; --t8:32px;
+    --t0:10.5px; --t1:11.5px; --t2:12.5px; --t3:13.5px; --t4:15px; --t5:17.5px; --t6:21px; --t7:25px; --t8:30px;
 
     /* ── jarak, sudut, kedalaman ── */
     --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px;
@@ -92,117 +92,123 @@
   @media(max-width:940px){.stik{position:static}}
 
   /* ═══ bingkai layar ═══ */
-  .scr{background:var(--paper);border-radius:11px;overflow:hidden;color:var(--w-ink);
-    box-shadow:0 2px 6px rgba(0,0,0,.25),0 16px 42px rgba(0,0,0,.3);font-size:var(--t2)}
-  .scr-top{display:flex;align-items:center;gap:6px;padding:7px 10px;background:#F3F4F7;border-bottom:1px solid var(--w-line)}
-  .scr-top i{width:8px;height:8px;border-radius:99px;background:#CDD2DA;display:block}
-  .scr-url{flex:1;margin-left:7px;background:#fff;border:1px solid var(--w-line);border-radius:5px;
-    padding:2px 8px;font-size:var(--t1);color:var(--w-soft)}
+  .scr{background:var(--paper);border-radius:10px;overflow:hidden;color:var(--w-ink);
+    box-shadow:0 2px 6px rgba(0,0,0,.25),0 16px 42px rgba(0,0,0,.3);font-size:var(--t1)}
+  .scr-top{display:flex;align-items:center;gap:6px;padding:6px 10px;background:#F3F4F7;border-bottom:1px solid var(--w-line)}
+  .scr-top i{width:7px;height:7px;border-radius:99px;background:#CDD2DA;display:block}
+  .scr-url{flex:1;margin-left:7px;background:#fff;border:1px solid var(--w-line);border-radius:4px;
+    padding:2px 8px;font-size:var(--t0);color:var(--w-soft);font-family:var(--mono);letter-spacing:-.01em}
   .scr-tag{position:absolute;margin:-1px 0 0 0}
   .app{display:flex;min-height:300px}
-  .side{width:132px;flex:0 0 132px;background:#FAFBFC;border-right:1px solid var(--w-line2);padding:9px 0}
+  .side{width:118px;flex:0 0 118px;background:#FAFBFC;border-right:1px solid var(--w-line2);padding:8px 0}
   @media(max-width:640px){.side{display:none}}
-  .brand{padding:0 11px 9px;font-weight:800;font-size:var(--t1)}
-  .brand span{color:var(--w-soft);font-weight:500}
-  .nav a{display:flex;align-items:center;gap:6px;padding:5px 11px;color:var(--w-mid);font-size:var(--t1);text-decoration:none}
-  .nav a .i{width:11px;text-align:center;opacity:.5;font-size:var(--t1)}
-  .nav a.sel{background:#E8EDF7;color:var(--w-ink);font-weight:650;box-shadow:inset 3px 0 0 var(--w-hot)}
+  .brand{padding:0 9px 8px;font-weight:800;font-size:var(--t0);display:flex;align-items:center;gap:5px;letter-spacing:-.01em}
+  .brand span{color:var(--w-soft);font-weight:500;font-size:var(--t0)}
+  .nav a{display:flex;align-items:center;gap:6px;padding:4px 9px;margin:1px 4px;border-radius:4px;color:var(--w-mid);font-size:var(--t0);text-decoration:none}
+  .nav a .i{width:11px;text-align:center;opacity:.5;font-size:var(--t0)}
+  .nav a.sel{background:#E8EDF7;color:var(--w-hot);font-weight:650;box-shadow:inset 2.5px 0 0 var(--w-hot)}
+  .nav a svg, .scr .nav a svg{width:13px;height:13px;flex:0 0 auto;color:var(--w-soft)}
+  .nav a.sel svg{color:var(--w-hot)}
   .main{flex:1;min-width:0}
-  .stop{display:flex;align-items:center;gap:8px;padding:8px 12px;border-bottom:1px solid var(--w-line2)}
-  .srch{flex:1;max-width:190px;background:var(--w-fill);border:1px solid var(--w-line2);border-radius:5px;
-    padding:3px 8px;font-size:var(--t1);color:var(--w-soft)}
-  .who{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:var(--t1);color:var(--w-mid)}
-  .av{width:19px;height:19px;border-radius:99px;background:var(--w-fill);border:1px solid var(--w-line);flex:0 0 auto}
-  .sbody{padding:12px}
-  .sh{font-size:var(--t3);font-weight:700;color:var(--w-ink)}
-  .sd{font-size:var(--t1);color:var(--w-mid);margin-bottom:10px}
+  .stop{display:flex;align-items:center;gap:8px;padding:6px 10px;border-bottom:1px solid var(--w-line2);background:#FAFBFD;min-height:34px}
+  .scr .search{flex:1;max-width:320px;position:relative;display:flex;align-items:center}
+  .scr .search svg{position:absolute;left:7px;width:12px;height:12px;color:var(--w-soft);pointer-events:none}
+  .scr .search input{width:100%;height:23px;padding:2px 7px 2px 23px;border:1px solid var(--w-line);border-radius:4px;font-size:var(--t0);color:var(--w-ink);background:#fff;outline:none}
+  .scr .search input::placeholder{color:var(--w-soft)}
+  .srch{flex:1;max-width:180px;background:#fff;border:1px solid var(--w-line);border-radius:4px;
+    padding:2px 7px;font-size:var(--t0);color:var(--w-soft)}
+  .who{margin-left:auto;display:flex;align-items:center;gap:6px;font-size:var(--t0);color:var(--w-mid)}
+  .av{width:17px;height:17px;border-radius:99px;background:#E2E8F0;border:1px solid #CBD5E1;flex:0 0 auto}
+  .sbody{padding:10px}
+  .sh{font-size:var(--t2);font-weight:700;color:var(--w-ink);letter-spacing:-.01em}
+  .sd{font-size:var(--t0);color:var(--w-mid);margin-bottom:8px}
 
-  .g{display:grid;gap:8px}
+  .g{display:grid;gap:7px}
   .g2{grid-template-columns:1fr 1fr} .g3{grid-template-columns:repeat(3,1fr)}
-  .g4{grid-template-columns:repeat(4,1fr)} .g21{grid-template-columns:1.6fr 1fr}
+  .g4{grid-template-columns:repeat(4,1fr)} .g21{grid-template-columns:2fr 1fr}
   @media(max-width:620px){.g2,.g3,.g4,.g21{grid-template-columns:1fr}}
 
-  .kpi{border:1px solid var(--w-line2);border-radius:7px;padding:8px 9px;background:#fff}
-  .kpi .k{font-size:var(--t0);color:var(--w-soft);letter-spacing:.05em;text-transform:uppercase}
-  .kpi .v{font-size:var(--t4);font-weight:760;margin-top:2px;letter-spacing:-.02em;color:var(--w-ink)}
+  .kpi{border:1px solid var(--w-line2);border-radius:6px;padding:6px 8px;background:#fff;box-shadow:0 1px 2px rgba(16,24,40,.04)}
+  .kpi .k{font-size:var(--t0);color:var(--w-soft);letter-spacing:.04em;text-transform:uppercase;font-weight:600}
+  .kpi .v{font-size:var(--t2);font-weight:750;margin-top:1px;letter-spacing:-.02em;color:var(--w-ink);font-variant-numeric:tabular-nums;line-height:1.25}
   .kpi .m{font-size:var(--t0);color:var(--w-mid);margin-top:1px}
 
-  .pan{border:1px solid var(--w-line2);border-radius:7px;background:#fff;overflow:hidden;overflow-x:auto}
-  .pan-h{display:flex;align-items:center;gap:6px;padding:7px 10px;border-bottom:1px solid var(--w-line2);background:#FCFCFD}
-  .pan-h b{font-size:var(--t1);color:var(--w-ink)} .pan-h .sp{flex:1}
-  .pan-b{padding:10px}
+  .pan{border:1px solid var(--w-line2);border-radius:6px;background:#fff;overflow:hidden;overflow-x:auto}
+  .pan-h{display:flex;align-items:center;gap:6px;padding:5px 8px;border-bottom:1px solid var(--w-line2);background:#FCFCFD}
+  .pan-h b{font-size:var(--t0);color:var(--w-ink)} .pan-h .sp{flex:1}
+  .pan-b{padding:8px}
 
-  table{width:100%;border-collapse:collapse;font-size:var(--t1)}
-  th{text-align:left;font-size:var(--t0);letter-spacing:.06em;text-transform:uppercase;color:var(--w-soft);
-     font-weight:750;padding:6px 9px;border-bottom:1px solid var(--w-line2);background:#FCFCFD}
-  td{padding:7px 9px;border-bottom:1px solid var(--w-line2);color:var(--w-mid);vertical-align:middle}
+  table{width:100%;border-collapse:collapse;font-size:var(--t0)}
+  th{text-align:left;font-size:var(--t0);letter-spacing:.05em;text-transform:uppercase;color:var(--w-soft);
+     font-weight:750;padding:5px 6px;border-bottom:1px solid var(--w-line2);background:#FCFCFD;white-space:nowrap}
+  td{padding:5px 6px;border-bottom:1px solid var(--w-line2);color:var(--w-mid);vertical-align:middle;font-size:var(--t0);line-height:1.35}
   td b{color:var(--w-ink);font-weight:650}
   tr:last-child td{border-bottom:0}
 
-  .cp{display:inline-block;font-size:var(--t0);font-weight:680;padding:2px 7px;border-radius:99px;
-    border:1px solid var(--w-line);color:var(--w-mid);background:#fff;white-space:nowrap}
+  .cp{display:inline-block;font-size:var(--t0);font-weight:650;padding:1px 6px;border-radius:99px;
+    border:1px solid var(--w-line);color:var(--w-mid);background:#fff;white-space:nowrap;line-height:1.3}
   .cp.ok{border-color:#A8D8B9;color:var(--w-ok);background:#F0FAF3}
   .cp.w{border-color:#EBCF9E;color:var(--w-warn);background:#FEF8EC}
   .cp.b{border-color:#E5B4AE;color:var(--w-bad);background:#FDF2F1}
   .cp.i{border-color:#B9CBEF;color:var(--w-hot);background:#F1F5FE}
   .cp.lk{border-color:#C9CDD6;color:#4B5563;background:#F2F4F7}
 
-  .bt{display:inline-flex;align-items:center;gap:5px;font-size:var(--t1);font-weight:650;padding:5px 11px;
-    border-radius:6px;border:1px solid var(--w-line);background:#fff;color:var(--w-ink)}
+  .bt{display:inline-flex;align-items:center;gap:4px;font-size:var(--t0);font-weight:650;padding:4px 9px;
+    border-radius:5px;border:1px solid var(--w-line);background:#fff;color:var(--w-ink)}
   .bt.pri{background:var(--w-hot);border-color:var(--w-hot);color:#fff}
   .bt.off{opacity:.42}
-  .bt.sm{font-size:var(--t0);padding:3px 8px}
+  .bt.sm{font-size:var(--t0);padding:2px 6px}
 
-  .pr{height:5px;border-radius:99px;background:var(--w-fill);overflow:hidden;margin:5px 0 3px}
+  .pr{height:4px;border-radius:99px;background:var(--w-fill);overflow:hidden;margin:4px 0 2px}
   .pr i{display:block;height:100%;background:var(--w-hot);border-radius:99px}
   .pr.g i{background:var(--w-ok)}
 
-  .ck{display:flex;align-items:flex-start;gap:7px;padding:6px 0;font-size:var(--t1);color:var(--w-mid);
+  .ck{display:flex;align-items:flex-start;gap:6px;padding:5px 0;font-size:var(--t0);color:var(--w-mid);
     border-bottom:1px solid var(--w-line2)}
   .ck:last-child{border-bottom:0}
-  .ck .m{width:14px;height:14px;border-radius:4px;display:grid;place-items:center;font-size:var(--t0);
+  .ck .m{width:13px;height:13px;border-radius:3px;display:grid;place-items:center;font-size:var(--t0);
     flex:0 0 auto;margin-top:1px;color:#fff;background:var(--w-ok)}
   .ck .m.x{background:var(--w-bad)} .ck .m.w{background:var(--w-warn)}
   .ck b{color:var(--w-ink);font-weight:650}
 
-  .fld{margin-bottom:8px}
-  .fld label{display:block;font-size:var(--t0);font-weight:680;color:var(--w-mid);margin-bottom:3px}
-  .inp{border:1px solid var(--w-line);border-radius:5px;padding:5px 8px;font-size:var(--t1);color:var(--w-ink);background:#fff}
+  .fld{margin-bottom:6px}
+  .fld label{display:block;font-size:var(--t0);font-weight:680;color:var(--w-mid);margin-bottom:2px}
+  .inp{border:1px solid var(--w-line);border-radius:4px;padding:4px 7px;font-size:var(--t0);color:var(--w-ink);background:#fff}
   .inp.dis{background:var(--w-fill);color:var(--w-mid)}
-  .drop{border:1.5px dashed var(--w-line);border-radius:7px;padding:13px;text-align:center;
-    font-size:var(--t1);color:var(--w-soft);background:#FCFCFD}
+  .drop{border:1.5px dashed var(--w-line);border-radius:6px;padding:10px;text-align:center;
+    font-size:var(--t0);color:var(--w-soft);background:#FCFCFD}
 
-  .wn{border:1px solid var(--w-line2);border-left:3px solid var(--w-soft);border-radius:0 6px 6px 0;
-    padding:7px 10px;font-size:var(--t1);color:var(--w-mid);background:#FBFBFC;line-height:1.5}
+  .wn{border:1px solid var(--w-line2);border-left:3px solid var(--w-soft);border-radius:0 5px 5px 0;
+    padding:5px 8px;font-size:var(--t0);color:var(--w-mid);background:#FBFBFC;line-height:1.38}
   .wn b{color:var(--w-ink)}
   .wn.i{border-left-color:var(--w-hot);background:#F7F9FE}
   .wn.w{border-left-color:var(--w-warn);background:#FEFBF4}
   .wn.g{border-left-color:var(--w-ok);background:#F6FBF8}
 
-  .tl{border-left:2px solid var(--w-line2);padding-left:13px;margin-left:4px}
-  .tl .it{position:relative;padding-bottom:11px}
+  .tl{border-left:2px solid var(--w-line2);padding-left:11px;margin-left:4px}
+  .tl .it{position:relative;padding-bottom:9px}
   .tl .it:last-child{padding-bottom:0}
-  .tl .it::before{content:'';position:absolute;left:-18px;top:2px;width:8px;height:8px;border-radius:99px;
+  .tl .it::before{content:'';position:absolute;left:-16px;top:2px;width:7px;height:7px;border-radius:99px;
     background:#fff;border:2px solid var(--w-line)}
   .tl .it.dn::before{background:var(--w-ok);border-color:var(--w-ok)}
   .tl .it.nw::before{background:var(--w-hot);border-color:var(--w-hot)}
-  .tl .t{font-size:var(--t1);font-weight:660;color:var(--w-ink)}
+  .tl .t{font-size:var(--t0);font-weight:660;color:var(--w-ink)}
   .tl .s{font-size:var(--t0);color:var(--w-mid)}
 
   /* frame HP */
-  .ph{width:252px;margin:0 auto;background:#1B2027;border-radius:27px;padding:7px;
+  .ph{width:292px;margin:0 auto;background:#1B2027;border-radius:28px;padding:7px;
     box-shadow:0 12px 34px rgba(0,0,0,.34)}
   .ph .in{background:#fff;border-radius:21px;overflow:hidden;display:flex;flex-direction:column;min-height:440px}
-  .ntch{height:19px;background:#fff;position:relative;flex:0 0 auto}
-  .ntch::after{content:'';width:68px;height:13px;border-radius:99px;background:#1B2027;position:absolute;
+  .ntch{height:18px;background:#fff;position:relative;flex:0 0 auto}
+  .ntch::after{content:'';width:68px;height:12px;border-radius:99px;background:#1B2027;position:absolute;
     top:2px;left:50%;transform:translateX(-50%)}
-  .ptop{padding:8px 12px;border-bottom:1px solid var(--w-line2);display:flex;align-items:center;gap:7px}
-  .ptop b{font-size:var(--t1);color:var(--w-ink)}
-  .pbody{padding:11px 12px;flex:1}
-  .pnav{display:flex;border-top:1px solid var(--w-line2);background:#FCFCFD}
-  .pnav div{flex:1;text-align:center;padding:7px 0 9px;font-size:var(--t0);color:var(--w-soft)}
-  .pnav div .i{display:block;font-size:var(--t2);margin-bottom:1px;opacity:.5}
-  .pnav div.sel{color:var(--w-hot)} .pnav div.sel .i{opacity:1}
+  .ptop{padding:7px 10px;border-bottom:1px solid var(--w-line2);display:flex;align-items:center;gap:7px}
+  .ptop b{font-size:var(--t0);color:var(--w-ink)}
+  .pbody{padding:9px 10px;flex:1}
+  .pnav{display:flex;border-top:1px solid var(--w-line2);background:#FCFCFD;padding:4px 0 6px}
+  .pnav div{flex:1;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:2px;font-size:var(--t0);color:var(--w-soft);text-align:center}
+  .pnav div svg{width:15px;height:15px;stroke-width:1.8}
+  .pnav div.sel{color:var(--w-hot);font-weight:650}
 
   /* ═══ gelembung alasan ═══ */
   .why{border:1px solid var(--d-line);border-radius:12px;background:var(--card);padding:14px 16px;margin-bottom:11px;
@@ -517,61 +523,63 @@
   cursor:pointer;transition:.13s;line-height:1.4}
 #lab .nav a:hover{background:var(--ui-ln2);color:var(--ui-ink)}
 #lab .nav a.on{background:var(--ui-brs);color:var(--hot);font-weight:650}
-#lab .nav a.on svg, .scr .nav a.on svg{color:var(--hot)}
-#lab .nav svg, .scr .nav svg{width:17px;height:17px;flex:0 0 auto;color:var(--ui-ink3)}
+#lab .nav a.on svg{color:var(--hot)}
+.scr .nav a.sel svg{color:var(--w-hot)}
+#lab .nav svg{width:15px;height:15px;flex:0 0 auto;color:var(--ui-ink3)}
+.scr .nav svg{width:13px;height:13px;flex:0 0 auto;color:var(--w-soft)}
 #lab .nav .i{display:none}
-#lab .nav .badge{margin-left:auto;background:var(--bad);color:#fff;font-size:var(--t1);
-  font-weight:700;padding:2px 6px;border-radius:99px;min-width:18px;text-align:center}
+#lab .nav .badge{margin-left:auto;background:var(--bad);color:#fff;font-size:var(--t0);
+  font-weight:700;padding:1px 5px;border-radius:99px;min-width:16px;text-align:center}
 
 /* ── bilah atas ── */
 #lab .main{display:flex;flex-direction:column;min-width:0}
 #lab .top{background:var(--paper);border-bottom:1px solid var(--ui-ln);
-  padding:9px var(--s5);display:flex;align-items:center;gap:var(--s4)}
-#lab .search{flex:1;max-width:380px;position:relative;display:flex;align-items:center}
-#lab .search svg, .scr .search svg{position:absolute;left:11px;width:15px;height:15px;color:var(--ui-ink3);pointer-events:none}
-#lab .search input{width:100%;padding:7px 12px 7px 33px;border:1px solid var(--ui-ln);
-  border-radius:var(--r1);font-size:var(--t2);font-family:var(--font);
+  padding:7px var(--s4);display:flex;align-items:center;gap:var(--s3)}
+#lab .search{flex:1;max-width:340px;position:relative;display:flex;align-items:center}
+#lab .search svg{position:absolute;left:9px;width:13px;height:13px;color:var(--ui-ink3);pointer-events:none}
+#lab .search input{width:100%;padding:5px 10px 5px 28px;border:1px solid var(--ui-ln);
+  border-radius:var(--r1);font-size:var(--t1);font-family:var(--font);
   background:var(--ui-sf2);color:var(--ui-ink);outline:none;transition:.15s}
 #lab .search input::placeholder{color:var(--ui-ink3)}
 #lab .search input:focus{border-color:var(--hot);background:#fff;box-shadow:0 0 0 3px rgba(79,70,229,.1)}
-#lab .tools{margin-left:auto;display:flex;align-items:center;gap:var(--s3)}
-#lab .ico{width:32px;height:32px;border-radius:var(--r1);border:1px solid var(--ui-ln);
+#lab .tools{margin-left:auto;display:flex;align-items:center;gap:var(--s2)}
+#lab .ico{width:28px;height:28px;border-radius:var(--r1);border:1px solid var(--ui-ln);
   background:var(--paper);display:grid;place-items:center;cursor:pointer;position:relative;transition:.13s}
 #lab .ico:hover{background:var(--ui-ln2)}
-#lab .ico svg, .scr .ico svg{width:16px;height:16px;color:var(--ui-ink2)}
-#lab .ico .dot{position:absolute;top:6px;right:7px;width:7px;height:7px;border-radius:99px;
-  background:var(--bad);border:2px solid var(--paper)}
-#lab .me{display:flex;align-items:center;gap:9px;padding-left:var(--s3);border-left:1px solid var(--ui-ln)}
-#lab .av{width:31px;height:31px;border-radius:99px;display:grid;place-items:center;
-  color:#fff;font-size:var(--t2);font-weight:700;background:linear-gradient(135deg,#F59E0B,#EF4444);flex:0 0 auto}
-#lab .me b{font-size:var(--t2);color:var(--ui-ink);display:block;line-height:1.3;font-weight:650}
-#lab .me span{font-size:var(--t1);color:var(--ui-ink3)}
+#lab .ico svg, .scr .ico svg{width:14px;height:14px;color:var(--ui-ink2)}
+#lab .ico .dot{position:absolute;top:5px;right:6px;width:6px;height:6px;border-radius:99px;
+  background:var(--bad);border:1.5px solid var(--paper)}
+#lab .me{display:flex;align-items:center;gap:7px;padding-left:var(--s2);border-left:1px solid var(--ui-ln)}
+#lab .av{width:26px;height:26px;border-radius:99px;display:grid;place-items:center;
+  color:#fff;font-size:var(--t0);font-weight:700;background:linear-gradient(135deg,#F59E0B,#EF4444);flex:0 0 auto}
+#lab .me b{font-size:var(--t1);color:var(--ui-ink);display:block;line-height:1.2;font-weight:650}
+#lab .me span{font-size:var(--t0);color:var(--ui-ink3)}
 
 /* ── isi halaman ── */
-#lab .body{padding:var(--s5);flex:1;overflow:auto}
-#lab .crumb{display:flex;align-items:center;gap:7px;font-size:var(--t2);color:var(--ui-ink3);margin-bottom:var(--s3)}
+#lab .body{padding:var(--s4);flex:1;overflow:auto}
+#lab .crumb{display:flex;align-items:center;gap:6px;font-size:var(--t1);color:var(--ui-ink3);margin-bottom:var(--s2)}
 #lab .crumb b{color:var(--ui-ink2);font-weight:600}
-#lab .h1{font-size:var(--t6);margin:0 0 5px;color:var(--ui-ink);letter-spacing:-.025em;font-weight:700}
-#lab .sub{font-size:var(--t3);color:var(--ui-ink2);margin:0 0 var(--s5)}
+#lab .h1{font-size:var(--t5);margin:0 0 4px;color:var(--ui-ink);letter-spacing:-.02em;font-weight:700}
+#lab .sub{font-size:var(--t2);color:var(--ui-ink2);margin:0 0 var(--s4)}
 
 /* ── kartu ── */
-#lab .card{background:var(--paper);border:1px solid var(--ui-ln);border-radius:var(--r3);
-  box-shadow:var(--sh1);overflow:hidden;margin-bottom:var(--s4)}
-#lab .ch{padding:12px var(--s4);border-bottom:1px solid var(--ui-ln2);
-  display:flex;align-items:center;gap:9px;background:var(--ui-sf2)}
-#lab .ch h3{font-size:var(--t3);margin:0;color:var(--ui-ink);font-weight:650;letter-spacing:-.01em}
-#lab .ch svg, .scr .ch svg{width:15px;height:15px;color:var(--ui-ink3)}
-#lab .ch .right{margin-left:auto;font-size:var(--t1);color:var(--ui-ink3);font-weight:600}
-#lab .cb{padding:var(--s4)}
+#lab .card{background:var(--paper);border:1px solid var(--ui-ln);border-radius:var(--r2);
+  box-shadow:var(--sh1);overflow:hidden;margin-bottom:var(--s3)}
+#lab .ch{padding:9px var(--s3);border-bottom:1px solid var(--ui-ln2);
+  display:flex;align-items:center;gap:8px;background:var(--ui-sf2)}
+#lab .ch h3{font-size:var(--t2);margin:0;color:var(--ui-ink);font-weight:650;letter-spacing:-.01em}
+#lab .ch svg, .scr .ch svg{width:14px;height:14px;color:var(--ui-ink3)}
+#lab .ch .right{margin-left:auto;font-size:var(--t0);color:var(--ui-ink3);font-weight:600}
+#lab .cb{padding:var(--s3)}
 
 /* ── tabel ── */
-#lab table{width:100%;border-collapse:collapse;font-size:var(--t2)}
-#lab thead th{text-align:left;padding:9px var(--s3);font-size:var(--t1);
+#lab table{width:100%;border-collapse:collapse;font-size:var(--t1)}
+#lab thead th{text-align:left;padding:7px var(--s3);font-size:var(--t0);
   color:var(--ui-ink3);font-weight:650;letter-spacing:.04em;text-transform:uppercase;
   background:var(--ui-sf2);border-bottom:1px solid var(--ui-ln);white-space:nowrap}
 #lab thead th.sortable{cursor:pointer;user-select:none}
 #lab thead th.sortable:hover{color:var(--hot)}
-#lab tbody td{padding:11px var(--s3);border-bottom:1px solid var(--ui-ln2);color:var(--ui-ink2);vertical-align:middle}
+#lab tbody td{padding:8px var(--s3);border-bottom:1px solid var(--ui-ln2);color:var(--ui-ink2);vertical-align:middle}
 #lab tbody tr:last-child td{border-bottom:0}
 #lab tbody tr{transition:.1s}
 #lab tbody tr:hover{background:var(--ui-sf2)}
@@ -579,9 +587,9 @@
 #lab .num{font-variant-numeric:tabular-nums;text-align:right;white-space:nowrap}
 
 /* ── lencana status ── */
-#lab .st{display:inline-flex;align-items:center;gap:5px;padding:3px 9px;border-radius:99px;
-  font-size:var(--t1);font-weight:650;white-space:nowrap;letter-spacing:.01em}
-#lab .st::before{content:"";width:6px;height:6px;border-radius:99px;background:currentColor;flex:0 0 auto}
+#lab .st{display:inline-flex;align-items:center;gap:4px;padding:2px 8px;border-radius:99px;
+  font-size:var(--t0);font-weight:650;white-space:nowrap;letter-spacing:.01em}
+#lab .st::before{content:"";width:5px;height:5px;border-radius:99px;background:currentColor;flex:0 0 auto}
 #lab .st.ok{background:var(--ui-oks);color:var(--ok)}
 #lab .st.wn{background:var(--ui-wns);color:var(--warn)}
 #lab .st.bd{background:var(--ui-bds);color:var(--bad)}
@@ -589,14 +597,14 @@
 #lab .st.br{background:var(--ui-brs);color:var(--hot)}
 
 /* ── kpi ── */
-#lab .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(160px,1fr));gap:var(--s3);margin-bottom:var(--s4)}
+#lab .kpis{display:grid;grid-template-columns:repeat(auto-fit,minmax(140px,1fr));gap:var(--s2);margin-bottom:var(--s3)}
 #lab .kpi{background:var(--paper);border:1px solid var(--ui-ln);border-radius:var(--r2);
-  padding:var(--s4);box-shadow:var(--sh1)}
-#lab .kpi .lb{font-size:var(--t1);color:var(--ui-ink3);font-weight:600;letter-spacing:.03em;
-  text-transform:uppercase;margin-bottom:6px;display:block}
-#lab .kpi .vl{font-size:var(--t6);color:var(--ui-ink);font-weight:700;letter-spacing:-.025em;
-  font-variant-numeric:tabular-nums;line-height:1.15;display:block}
-#lab .kpi .dt{font-size:var(--t1);color:var(--ui-ink3);margin-top:5px;display:block}
+  padding:var(--s3);box-shadow:var(--sh1)}
+#lab .kpi .lb{font-size:var(--t0);color:var(--ui-ink3);font-weight:600;letter-spacing:.03em;
+  text-transform:uppercase;margin-bottom:4px;display:block}
+#lab .kpi .vl{font-size:var(--t4);color:var(--ui-ink);font-weight:700;letter-spacing:-.02em;
+  font-variant-numeric:tabular-nums;line-height:1.2;display:block}
+#lab .kpi .dt{font-size:var(--t0);color:var(--ui-ink3);margin-top:4px;display:block}
 #lab .kpi .dt.up{color:var(--ok);font-weight:600}
 #lab .kpi .dt.dn{color:var(--bad);font-weight:600}
 
@@ -964,7 +972,7 @@
               <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Pelajar</a><a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Persetujuan</a>
               <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>Akademik</a><a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z"/><path d="M14 2v6h6M9 15h6M9 11h3"/></svg>Laporan</a></div></div>
           <div class="main">
-            <div class="stop"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, nomor transaksi, atau kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
+            <div class="stop"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, transaksi, kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
             <div class="sbody">
               <div class="sh">BAZNAS — Penyaluran Zakat 2026</div><div class="sd">Masuk 12 Januari 2026 · rekening penampung terpisah</div>
               <div class="g g3">
@@ -1033,7 +1041,7 @@
               <a class="sel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Pelajar</a><a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Persetujuan</a>
               <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>Akademik</a><a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z"/><path d="M14 2v6h6M9 15h6M9 11h3"/></svg>Laporan</a></div></div>
           <div class="main">
-            <div class="stop"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, nomor transaksi, atau kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
+            <div class="stop"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, transaksi, kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
             <div class="sbody">
               <div style="display:flex;align-items:center;gap:8px;margin-bottom:9px">
                 <span class="av" style="width:30px;height:30px"></span>
@@ -1051,7 +1059,7 @@
                     <tr><th>Tahap</th><th>Periode</th><th>Jumlah</th><th>Sumber</th><th>Status</th></tr>
                     <tr><td><b>1</b></td><td>Sem 1 · 2026</td><td>Rp 25 jt</td><td>BAZNAS</td><td><span class="cp ok">Cair</span></td></tr>
                     <tr><td><b>2</b></td><td>Sem 2 · 2027</td><td>Rp 25 jt</td><td>BAZNAS</td><td><span class="cp ok">Cair</span></td></tr>
-                    <tr><td><b>3</b></td><td>Sem 3 · 2027</td><td>Rp 25 jt</td><td>Sinar Mas</td><td><span class="cp w">Tunggu syarat akademik</span></td></tr>
+                    <tr><td><b>3</b></td><td>Sem 3 · 2027</td><td>Rp 25 jt</td><td>Sinar Mas</td><td><span class="cp w">Tertahan</span></td></tr>
                     <tr><td><b>4</b></td><td>Sem 4 · 2028</td><td>Rp 25 jt</td><td>Sinar Mas</td><td><span class="cp">Terjadwal</span></td></tr>
                   </table></div>
                 <div class="pan"><div class="pan-h"><b>Komposisi sumber</b></div><div class="pan-b">
@@ -1118,7 +1126,7 @@
               <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Pelajar</a><a class="sel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Persetujuan</a>
               <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>Akademik</a><a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z"/><path d="M14 2v6h6M9 15h6M9 11h3"/></svg>Laporan</a></div></div>
           <div class="main">
-            <div class="stop"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, nomor transaksi, atau kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
+            <div class="stop"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, transaksi, kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
             <div class="sbody">
               <div class="sh">Tinjau Pencairan · TRX-2026-0914</div>
               <div class="sd">Diajukan Tokyo Institute of Technology · 18 September 2026</div>
@@ -1171,7 +1179,7 @@
       <div class="why a"><div class="hd"><span class="ic">✓</span><span class="tt">Keputusan: rekening penerima dikunci di master data</span></div>
         <p>Kampus tidak bisa mengganti nomor rekening saat mengajukan tagihan. Modus penipuan paling umum di pembayaran lintas negara — surel palsu meminta “rekening baru” — tertutup di tingkat struktur, bukan lewat kewaspadaan operator.</p></div>
 
-      <div class="ev row"><div class="fig" style="font-size:var(--t5);min-width:88px;color:var(--warn)">Rp 6,5 M</div>
+      <div class="ev row"><div class="fig" style="font-size:var(--t5);min-width:88px;color:var(--d-warn)">Rp 6,5 M</div>
         <div><div class="lb" style="margin-bottom:4px">Koreksi angka yang pernah salah</div>
           <p>Syarat P3MI bukan Rp1,5 miliar. Deposito Rp1,5 M itu <b>baru satu komponen</b> — Pasal 54(1)(a) juga mensyaratkan modal disetor Rp5 M, sehingga totalnya ≈ Rp6,5 miliar.</p>
           <p style="margin-top:6px">Relevansinya di sini: struktur “Eduhub hanya mencatat, bank yang memindahkan uang” menghindari kategori izin yang mahal — <b>tapi ini analisis, bukan kutipan pasal, dan wajib diperiksa penasihat hukum sebelum dijadikan pegangan.</b></p>
@@ -1226,24 +1234,24 @@
         <div class="ptop"><span class="av"></span><div><b>Rizki Maulana</b>
           <div style="font-size:var(--t0);color:var(--w-soft)">Tokyo Inst. of Technology</div></div></div>
         <div class="pbody">
-          <div class="pan" style="margin-bottom:9px"><div class="pan-b">
-            <div style="font-size:var(--t0);color:var(--w-soft);letter-spacing:.05em;text-transform:uppercase">Pagu semester ini</div>
-            <div style="font-size:var(--t5);font-weight:760;margin-top:2px;color:var(--w-ink)">Rp 25.000.000</div>
+          <div class="pan" style="margin-bottom:8px"><div class="pan-b">
+            <div style="font-size:var(--t0);color:var(--w-soft);letter-spacing:.04em;text-transform:uppercase">Pagu semester ini</div>
+            <div style="font-size:var(--t4);font-weight:750;margin-top:1px;color:var(--w-ink)">Rp 25.000.000</div>
             <div class="pr"><i style="width:100%"></i></div>
             <div style="font-size:var(--t0);color:var(--w-mid)">Seluruhnya sudah dibayarkan ke kampus</div>
           </div></div>
-          <div class="pan" style="margin-bottom:9px"><div class="pan-b">
-            <div style="font-size:var(--t1);font-weight:660;color:var(--w-ink);margin-bottom:6px">Pencairan berikutnya</div>
-            <div class="ck" style="border:0;padding:3px 0"><span class="m w">!</span>
+          <div class="pan" style="margin-bottom:8px"><div class="pan-b">
+            <div style="font-size:var(--t1);font-weight:660;color:var(--w-ink);margin-bottom:5px">Pencairan berikutnya</div>
+            <div class="ck" style="border:0;padding:2px 0"><span class="m w">!</span>
               <div><b>Tahap 3 · Rp 25 jt</b><br>Menunggu transkrip Sem 2 dari kampus</div></div>
           </div></div>
-          <div class="pan" style="margin-bottom:9px"><div class="pan-b">
-            <div style="font-size:var(--t1);font-weight:660;color:var(--w-ink);margin-bottom:5px">Biaya hidup bulanan</div>
-            <div style="font-size:var(--t4);font-weight:720;color:var(--w-ink)">Rp 4.500.000</div>
-            <div style="font-size:var(--t0);color:var(--w-mid)">Masuk rekening pribadi tiap tanggal 1</div>
-            <div class="wn g" style="margin-top:7px">Tidak perlu melaporkan belanja harian.</div>
+          <div class="pan" style="margin-bottom:8px"><div class="pan-b">
+            <div style="font-size:var(--t1);font-weight:660;color:var(--w-ink);margin-bottom:4px">Biaya hidup bulanan</div>
+            <div style="font-size:var(--t3);font-weight:720;color:var(--w-ink)">Rp 4.500.000</div>
+            <div style="font-size:var(--t0);color:var(--w-mid);white-space:nowrap">Masuk rekening pribadi tiap tanggal 1</div>
+            <div class="wn g" style="margin-top:6px">Tidak perlu melaporkan belanja harian.</div>
           </div></div>
-          <div class="wn"><b>Tidak ada tombol “Tarik Tunai” di aplikasi ini.</b> EduTrust mencatat, bank yang memindahkan uang.</div>
+          <div class="wn" style="margin-bottom:6px"><b>Tidak ada tombol “Tarik Tunai” di aplikasi ini.</b> EduTrust mencatat, bank yang memindahkan uang.</div>
         </div>
         <div class="pnav"><div class="sel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>Beranda</div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>Riwayat</div>
           <div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>Akademik</div><div><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>Saya</div></div>
@@ -1292,7 +1300,7 @@
               <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Pelajar</a><a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Persetujuan</a>
               <a class="sel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>Akademik</a><a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z"/><path d="M14 2v6h6M9 15h6M9 11h3"/></svg>Laporan</a></div></div>
           <div class="main">
-            <div class="stop"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, nomor transaksi, atau kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
+            <div class="stop"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, transaksi, kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
             <div class="sbody">
               <div class="sh">Verifikasi Syarat Akademik · Rizki Maulana</div>
               <div class="sd">Semester 2 · 2027 — menentukan apakah pencairan tahap 3 boleh berjalan</div>
@@ -1405,7 +1413,7 @@
             <div class="nav"><a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>Dasbor</a><a class="sel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>Telusuri Dana</a>
               <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z"/><path d="M14 2v6h6M9 15h6M9 11h3"/></svg>Laporan</a></div></div>
           <div class="main">
-            <div class="stop"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, nomor transaksi, atau kampus…"></div><div class="who"><span>PT Sinar Mas · CSR</span><span class="av"></span></div></div>
+            <div class="stop"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, transaksi, kampus…"></div><div class="who"><span>PT Sinar Mas · CSR</span><span class="av"></span></div></div>
             <div class="sbody">
               <div class="sh">Telusuri Dana</div>
               <div class="sd">Rp 2,4 M diserahkan 3 Maret 2026 · 47 transaksi tercatat</div>
@@ -1455,7 +1463,7 @@
             <div class="nav"><a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>Dasbor</a><a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>Telusuri Dana</a>
               <a class="sel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z"/><path d="M14 2v6h6M9 15h6M9 11h3"/></svg>Laporan</a></div></div>
           <div class="main">
-            <div class="stop"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, nomor transaksi, atau kampus…"></div><div class="who"><span>PT Sinar Mas · CSR</span><span class="av"></span></div></div>
+            <div class="stop"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, transaksi, kampus…"></div><div class="who"><span>PT Sinar Mas · CSR</span><span class="av"></span></div></div>
             <div class="sbody">
               <div class="sh">Laporan Siap Pakai</div>
               <div class="sd">Dibuat dari data yang sama — tidak ada pengetikan ulang</div>
@@ -1531,7 +1539,7 @@
               <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Pelajar</a><a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Persetujuan</a>
               <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>Akademik</a><a class="sel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z"/><path d="M14 2v6h6M9 15h6M9 11h3"/></svg>Laporan</a></div></div>
           <div class="main">
-            <div class="stop"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, nomor transaksi, atau kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
+            <div class="stop"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, transaksi, kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
             <div class="sbody">
               <div class="sh">Dana Bergulir Antar-Angkatan</div>
               <div class="sd">Satu rupiah yang sama membiayai lebih dari satu pelajar</div>
@@ -1603,7 +1611,7 @@
               <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M16 21v-2a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M22 21v-2a4 4 0 0 0-3-3.87"/></svg>Pelajar</a><a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M9 11l3 3L22 4"/><path d="M21 12v7a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h11"/></svg>Persetujuan</a>
               <a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>Akademik</a><a class="sel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z"/><path d="M14 2v6h6M9 15h6M9 11h3"/></svg>Laporan</a></div></div>
           <div class="main">
-            <div class="stop"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, nomor transaksi, atau kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
+            <div class="stop"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, transaksi, kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
             <div class="sbody">
               <div class="sh">Rekonsiliasi September 2026</div>
               <div class="sd">47 transaksi · 46 cocok · 1 selisih</div>
@@ -1998,7 +2006,7 @@
         </div>
       </div>
       <div class="main">
-        <div class="top"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, nomor transaksi, atau kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
+        <div class="top"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, transaksi, kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
         <div class="body">
           <h3 class="sh">BAZNAS — Penyaluran Zakat 2026</h3>
           <p class="sd">Masuk 12 Januari 2026 · Rekening penampung terpisah</p>
@@ -2065,7 +2073,7 @@
         </div>
       </div>
       <div class="main">
-        <div class="top"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, nomor transaksi, atau kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
+        <div class="top"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, transaksi, kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
         <div class="body">
           <div style="display:flex;align-items:center;gap:12px;margin-bottom:12px">
             <span class="av" style="width:42px;height:42px"></span>
@@ -2135,7 +2143,7 @@
         </div>
       </div>
       <div class="main">
-        <div class="top"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, nomor transaksi, atau kampus…"></div><div class="who"><span>Tokyo Inst. of Technology</span><span class="av"></span></div></div>
+        <div class="top"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, transaksi, kampus…"></div><div class="who"><span>Tokyo Inst. of Technology</span><span class="av"></span></div></div>
         <div class="body">
           <h3 class="sh">Kirim Tagihan Baru</h3>
           <p class="sd">Tagihan akan masuk ke antrian persetujuan Eduhub</p>
@@ -2185,7 +2193,7 @@
         </div>
       </div>
       <div class="main">
-        <div class="top"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, nomor transaksi, atau kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
+        <div class="top"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, transaksi, kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
         <div class="body">
           <h3 class="sh">Antrian Persetujuan</h3>
           <p class="sd">5 tagihan · total Rp 312 jt</p>
@@ -2235,7 +2243,7 @@
         </div>
       </div>
       <div class="main">
-        <div class="top"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, nomor transaksi, atau kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
+        <div class="top"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, transaksi, kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
         <div class="body">
           <h3 class="sh">Tinjau Pencairan · TRX-2026-0914</h3>
           <p class="sd">Diajukan Tokyo Institute of Technology · 18 September 2026</p>
@@ -2325,7 +2333,7 @@
         </div>
       </div>
       <div class="main">
-        <div class="top"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, nomor transaksi, atau kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
+        <div class="top"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, transaksi, kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
         <div class="body">
           <h3 class="sh">Verifikasi Syarat Akademik · Rizki Maulana</h3>
           <p class="sd">Semester 2 · 2027 — menentukan apakah pencairan tahap 3 boleh berjalan</p>
@@ -2482,7 +2490,7 @@
           <a data-go="w3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z"/><path d="M14 2v6h6M9 15h6M9 11h3"/></svg>Laporan</a><a><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="9" rx="1.5"/><rect x="14" y="3" width="7" height="5" rx="1.5"/><rect x="14" y="12" width="7" height="9" rx="1.5"/><rect x="3" y="16" width="7" height="5" rx="1.5"/></svg>Pengaturan</a></div>
       </div>
       <div class="main">
-        <div class="top"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, nomor transaksi, atau kampus…"></div><div class="who"><span>PT Sinar Mas · CSR</span><span class="av"></span></div></div>
+        <div class="top"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, transaksi, kampus…"></div><div class="who"><span>PT Sinar Mas · CSR</span><span class="av"></span></div></div>
         <div class="body">
           <h3 class="sh">Dana CSR Anda</h3>
           <p class="sd">Penyaluran 2026 · diperbarui otomatis</p>
@@ -2536,7 +2544,7 @@
           <a data-go="w3"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z"/><path d="M14 2v6h6M9 15h6M9 11h3"/></svg>Laporan</a></div>
       </div>
       <div class="main">
-        <div class="top"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, nomor transaksi, atau kampus…"></div><div class="who"><span>PT Sinar Mas · CSR</span><span class="av"></span></div></div>
+        <div class="top"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, transaksi, kampus…"></div><div class="who"><span>PT Sinar Mas · CSR</span><span class="av"></span></div></div>
         <div class="body">
           <h3 class="sh">Telusuri Dana</h3>
           <p class="sd">Rp 2,4 M diserahkan 3 Maret 2026 · 47 transaksi tercatat</p>
@@ -2584,7 +2592,7 @@
           <a data-go="a7"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>Akademik</a><a class="sel"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z"/><path d="M14 2v6h6M9 15h6M9 11h3"/></svg>Laporan</a></div>
       </div>
       <div class="main">
-        <div class="top"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, nomor transaksi, atau kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
+        <div class="top"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, transaksi, kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
         <div class="body">
           <h3 class="sh">Rekonsiliasi Bulan September 2026</h3>
           <p class="sd">47 transaksi · 46 cocok · 1 selisih</p>
@@ -2652,7 +2660,7 @@
       </div>
       <div class="main">
         <div class="top">
-          <div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, nomor transaksi, atau kampus…"></div>
+          <div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, transaksi, kampus…"></div>
           <div class="tools">
             <div class="ico"><span class="dot"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></div>
             <div class="me"><div class="av">SR</div><div><b>S. Rahmawati</b><span>Staf Penyaluran</span></div></div>
@@ -2738,7 +2746,7 @@
       </div>
       <div class="main">
         <div class="top">
-          <div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, nomor transaksi, atau kampus…"></div>
+          <div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, transaksi, kampus…"></div>
           <div class="tools">
             <div class="ico"><span class="dot"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></div>
             <div class="me"><div class="av">SR</div><div><b>S. Rahmawati</b><span>Staf Penyaluran</span></div></div>
@@ -2822,7 +2830,7 @@
       </div>
       <div class="main">
         <div class="top">
-          <div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, nomor transaksi, atau kampus…"></div>
+          <div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, transaksi, kampus…"></div>
           <div class="tools">
             <div class="ico"><span class="dot"></span><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M18 8A6 6 0 0 0 6 8c0 7-3 9-3 9h18s-3-2-3-9"/><path d="M13.7 21a2 2 0 0 1-3.4 0"/></svg></div>
             <div class="me"><div class="av">SR</div><div><b>S. Rahmawati</b><span>Staf Penyaluran</span></div></div>
@@ -2887,7 +2895,7 @@
           <a data-go="a7"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M22 10 12 5 2 10l10 5 10-5Z"/><path d="M6 12v5c0 1.7 2.7 3 6 3s6-1.3 6-3v-5"/></svg>Akademik</a><a data-go="a8"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6Z"/><path d="M14 2v6h6M9 15h6M9 11h3"/></svg>Laporan</a></div>
       </div>
       <div class="main">
-        <div class="top"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, nomor transaksi, atau kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
+        <div class="top"><div class="search"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.9" stroke-linecap="round" stroke-linejoin="round" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg><input type="text" placeholder="Cari pelajar, transaksi, kampus…"></div><div class="who"><span>Operator</span><span class="av"></span></div></div>
         <div class="body">
           <h3 class="sh">Dana Bergulir Antar-Angkatan</h3>
           <p class="sd">Satu rupiah yang sama membiayai lebih dari satu pelajar</p>
