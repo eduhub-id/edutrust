@@ -8,14 +8,15 @@
   :root{
     /* ── permukaan gelap: bagian narasi (Bab 0-11 & 13) ── */
     --bg:#0C111C; --bg2:#111827; --card:rgba(255,255,255,.04);
-    --d-ink:#E9EEF8; --d-dim:#97A3BC; --d-soft:#6B7896; --d-line:rgba(255,255,255,.11);
+    --d-ink:#E9EEF8; --d-dim:#97A3BC; --d-soft:#8593B0; --d-line:rgba(255,255,255,.11);
+    --d-bad:#F07171; --d-ok:#34D399; --d-warn:#FBBF24;
 
     /* ── permukaan terang: layar produk (Ruang Coba) ──
        SATU definisi, dipakai narasi lewat --w-* maupun layar lewat nama pendek */
     --paper:#FFFFFF; --canvas:#E9EBEF;
-    --ink:#2A2F3A; --mid:#6B7280; --soft:#9CA3AF;
+    --ink:#2A2F3A; --mid:#5C6470; --soft:#656C7A;
     --line:#D5D9E0; --line2:#E7EAEF; --fill:#EDEFF3;
-    --hot:#08417B; --ok:#059669; --warn:#D97706; --bad:#DC2626;
+    --hot:#08417B; --ok:#047857; --warn:#B45309; --bad:#CF3131;
 
     /* alias lama --w-* → menunjuk token yang sama persis (tanpa nilai kembar) */
     --w-ink:var(--ink); --w-mid:var(--mid); --w-soft:var(--soft);
@@ -28,7 +29,7 @@
     /* ── tipografi: satu skala untuk SELURUH dokumen ── */
     --font:'Inter var','Inter',-apple-system,BlinkMacSystemFont,'SF Pro Text','Segoe UI',Roboto,sans-serif;
     --mono:'SF Mono',ui-monospace,'JetBrains Mono',monospace;
-    --t0:9.5px; --t1:11px; --t2:12px; --t3:13px; --t4:15px; --t5:18px; --t6:23px; --t7:26px; --t8:30px;
+    --t0:11px; --t1:12px; --t2:13px; --t3:14px; --t4:16px; --t5:19px; --t6:24px; --t7:28px; --t8:32px;
 
     /* ── jarak, sudut, kedalaman ── */
     --s1:4px; --s2:8px; --s3:12px; --s4:16px; --s5:24px; --s6:32px;
@@ -40,7 +41,7 @@
     /* ── token antarmuka produk ── */
     --ui-bg:#F7F8FA; --ui-sf2:#FBFCFD;
     --ui-ln:#E4E7EC; --ui-ln2:#F0F2F5;
-    --ui-ink:#0F1729; --ui-ink2:#475467; --ui-ink3:#8792A8;
+    --ui-ink:#0F1729; --ui-ink2:#475467; --ui-ink3:#6E7A93;
     --ui-br2:#0A58CA; --ui-brs:#EFF9FA;
     --ui-oks:#ECFDF5;
     --ui-wns:#FFFBEB;
@@ -100,7 +101,7 @@
   .scr-tag{position:absolute;margin:-1px 0 0 0}
   .app{display:flex;min-height:300px}
   .side{width:132px;flex:0 0 132px;background:#FAFBFC;border-right:1px solid var(--w-line2);padding:9px 0}
-  @media(max-width:560px){.side{display:none}}
+  @media(max-width:640px){.side{display:none}}
   .brand{padding:0 11px 9px;font-weight:800;font-size:var(--t1)}
   .brand span{color:var(--w-soft);font-weight:500}
   .nav a{display:flex;align-items:center;gap:6px;padding:5px 11px;color:var(--w-mid);font-size:var(--t1);text-decoration:none}
@@ -225,13 +226,13 @@
   .why.w .ic{background:rgba(255,184,77,.2);color:var(--warn)}
   .why.d{border-color:rgba(255,107,107,.3);background:rgba(255,107,107,.045)}
   .why.d::before{background:#2A1717;border-color:rgba(255,107,107,.3)}
-  .why.d .ic{background:rgba(255,107,107,.18);color:var(--bad)}
+  .why.d .ic{background:rgba(255,107,107,.18);color:var(--d-bad)}
 
   /* ═══ kartu data riset ═══ */
   .ev{border:1px solid var(--d-line);border-radius:11px;background:rgba(167,139,250,.05);
     border-color:rgba(167,139,250,.28);padding:12px 14px;margin-bottom:11px}
   .ev .lb{font-size:var(--t0);font-weight:800;letter-spacing:.14em;text-transform:uppercase;color:var(--viol);margin-bottom:7px}
-  .ev .fig{font-size:var(--t6);font-weight:800;letter-spacing:-.025em;color:var(--d-ink);line-height:1.1}
+  .ev .fig{font-size:var(--t6);font-weight:800;letter-spacing:-.025em;color:var(--d-ink);line-height:1.28;text-wrap:balance}
   .ev p{font-size:var(--t2);line-height:1.55;margin-top:4px}
   .ev .src{font-size:var(--t1);color:var(--d-soft);margin-top:7px;padding-top:7px;border-top:1px solid var(--d-line)}
   .ev .src b{color:var(--d-dim);font-weight:600}
@@ -244,13 +245,14 @@
   .card.acc{border-color:rgba(61,220,151,.36);background:rgba(61,220,151,.05)}
   .card.wr{border-color:rgba(255,184,77,.34);background:rgba(255,184,77,.05)}
   .card.bd{border-color:rgba(255,107,107,.3);background:rgba(255,107,107,.04)}
+  .card.bd b{color:var(--d-bad)}
   .card h4{margin-bottom:5px}
   .card p{font-size:var(--t2);line-height:1.55}
 
   .tg{display:inline-block;font-size:var(--t1);padding:3px 9px;border-radius:99px;border:1px solid var(--d-line);
     color:var(--d-dim);margin:3px 4px 0 0}
   .tg.ok{border-color:rgba(61,220,151,.4);color:var(--acc);background:rgba(61,220,151,.07)}
-  .tg.no{border-color:rgba(255,107,107,.34);color:var(--bad);background:rgba(255,107,107,.05)}
+  .tg.no{border-color:rgba(255,107,107,.34);color:var(--d-bad);background:rgba(255,107,107,.05)}
   .tg.w{border-color:rgba(255,184,77,.38);color:var(--warn);background:rgba(255,184,77,.06)}
 
   .vs{display:grid;grid-template-columns:1fr 1fr;gap:12px}
@@ -259,9 +261,9 @@
   .vsb.no{background:rgba(255,107,107,.05);border-color:rgba(255,107,107,.26)}
   .vsb.ys{background:rgba(61,220,151,.05);border-color:rgba(61,220,151,.32)}
   .vsb h4{font-size:var(--t3);margin-bottom:9px}
-  .vsb.no h4{color:var(--bad)} .vsb.ys h4{color:var(--acc)}
+  .vsb.no h4{color:var(--d-bad)} .vsb.ys h4{color:var(--acc)}
   .vsb li{font-size:var(--t2);color:var(--d-dim);list-style:none;padding:5px 0 5px 19px;position:relative;line-height:1.5}
-  .vsb.no li::before{content:'✕';position:absolute;left:0;top:5px;color:var(--bad);font-size:var(--t1)}
+  .vsb.no li::before{content:'✕';position:absolute;left:0;top:5px;color:var(--d-bad);font-size:var(--t1)}
   .vsb.ys li::before{content:'✓';position:absolute;left:0;top:5px;color:var(--acc);font-size:var(--t1)}
   .vsb li b{color:var(--d-ink);font-weight:620}
 
@@ -303,7 +305,7 @@
 .ovflow i{font-style:normal;color:var(--d-soft);font-size:var(--t1)}
 .ovflow .ovloop{background:rgba(61,220,151,.14);border-color:rgba(61,220,151,.4);color:var(--acc);font-weight:700}
 @media(max-width:860px){ .ovgrid{grid-template-columns:1fr 1fr} }
-@media(max-width:560px){ .ovgrid{grid-template-columns:1fr} }
+@media(max-width:640px){ .ovgrid{grid-template-columns:1fr} }
 
 /* ===== Ruang Coba (wireframe interaktif tertanam) ===== */
 .labwrap{margin-top:22px;border:1px solid var(--d-line);border-radius:16px;overflow:hidden;background:var(--card)}
@@ -315,19 +317,19 @@
 .lbtn:hover{border-color:var(--d-soft);color:var(--d-ink)}
 .lbtn.on{background:rgba(61,220,151,.14);border-color:rgba(61,220,151,.5);color:var(--acc)}
 .lbtn.nav{min-width:34px;text-align:center;font-size:var(--t3);line-height:1}
-#labCnt{font-size:var(--t1);color:var(--soft);min-width:96px;text-align:center;font-variant-numeric:tabular-nums}
+#labCnt{font-size:var(--t1);color:var(--d-soft);min-width:96px;text-align:center;font-variant-numeric:tabular-nums}
 .labhint{font-size:var(--t1);color:var(--d-soft);padding:9px 13px;border-top:1px solid var(--d-line);background:var(--bg2)}
 .labhint b{color:var(--d-dim)}
 @media(max-width:640px){ .labbar{gap:6px;padding:9px} #labCnt{min-width:auto} }
   #lab *{box-sizing:border-box;margin:0;padding:0}
   #lab .bar .ttl{font-weight:700;font-size:var(--t3);letter-spacing:.01em}
-  #lab .bar .sub{font-size:var(--t1);color:#9AA3B2}
+  #lab .bar .sub{font-size:var(--t1);color:var(--mid)}
   #lab .bar .sp{flex:1}
   #lab .bar button{font:inherit;font-size:var(--t1);padding:5px 11px;border-radius:7px;cursor:pointer;
     background:#2C333D;color:#E6E9EF;border:1px solid #3A424E}
   #lab .bar button:hover{background:#39424E}
   #lab .bar button.on{background:var(--hot);border-color:var(--hot);color:#fff}
-  #lab .bar .cnt{font-size:var(--t1);color:#9AA3B2;min-width:92px;text-align:center}
+  #lab .bar .cnt{font-size:var(--t1);color:var(--mid);min-width:92px;text-align:center}
 
   #lab .stage{padding:22px 16px 60px;display:flex;justify-content:center}
   #lab .screen{display:none;width:100%;max-width:1060px}
@@ -352,7 +354,7 @@
   #lab .r4{grid-template-columns:repeat(4,1fr)} #lab .r3{grid-template-columns:repeat(3,1fr)}
   #lab .r2{grid-template-columns:repeat(2,1fr)} #lab .r21{grid-template-columns:2fr 1fr}
   @media(max-width:860px){#lab .r4,#lab .r3,#lab .r2,#lab .r21{grid-template-columns:1fr 1fr}}
-  @media(max-width:560px){#lab .r4,#lab .r3,#lab .r2,#lab .r21{grid-template-columns:1fr}}
+  @media(max-width:640px){#lab .r4,#lab .r3,#lab .r2,#lab .r21{grid-template-columns:1fr}}
   #lab .kpi .k{font-size:var(--t1);color:var(--soft);letter-spacing:.04em;text-transform:uppercase}
   #lab .kpi .v{font-size:var(--t5);font-weight:750;margin-top:3px;letter-spacing:-.02em}
   #lab .kpi .m{font-size:var(--t1);color:var(--mid);margin-top:2px}
@@ -449,7 +451,7 @@
   #lab .lane{margin-bottom:16px}
   #lab .lane-h{display:flex;align-items:center;gap:9px;margin-bottom:9px}
   #lab .lane-h b{font-size:var(--t2);font-weight:700}
-  #lab .lane-h span{font-size:var(--t1);color:var(--soft)}
+  #lab .lane-h span{font-size:var(--t1);color:var(--mid)}
   #lab .lane-h .pip{width:9px;height:9px;border-radius:3px;background:var(--hot)}
   #lab .cards{display:flex;gap:9px;flex-wrap:wrap}
   #lab .mc{flex:1;min-width:152px;background:#fff;border:1px solid var(--line);border-radius:9px;padding:10px 11px;
@@ -464,14 +466,14 @@
     .srcls{display:flex;flex-direction:column;gap:5px;margin-top:9px;padding-top:9px;border-top:1px dashed rgba(148,163,184,.34)}
     .srcl{display:inline-flex;align-items:flex-start;gap:6px;font-size:var(--t2);line-height:1.5;color:#3b82f6;text-decoration:none;font-weight:600;padding:3px 7px;border-radius:6px;border:1px solid rgba(59,130,246,.26);background:rgba(59,130,246,.07);transition:.14s;word-break:break-word}
     .srcl:hover{background:rgba(59,130,246,.15);border-color:rgba(59,130,246,.5);transform:translateX(2px)}
-    .srcown{font-size:var(--t1);color:var(--muted);font-style:italic}
+    .srcown{font-size:var(--t1);color:var(--d-soft);font-style:italic}
   
     .bibh{font-size:var(--t3);letter-spacing:.04em;text-transform:uppercase;color:var(--d-dim);margin:22px 0 10px;font-weight:800}
     .bib{margin:0;padding-left:22px;display:flex;flex-direction:column;gap:9px}
     .bib li{font-size:var(--t3);line-height:1.6}
     .bib a{color:#3b82f6;text-decoration:none;font-weight:650}
     .bib a:hover{text-decoration:underline}
-    .bibd{display:block;font-size:var(--t1);color:var(--muted);margin-top:2px}
+    .bibd{display:block;font-size:var(--t1);color:var(--d-soft);margin-top:2px}
     .bibnote{font-size:var(--t3);color:var(--d-soft);background:var(--bg2);border:1px solid var(--d-line);border-left:3px solid var(--d-dim);border-radius:8px;padding:11px 14px;margin:14px 0 4px;line-height:1.65}
   
 /* ═══════════════════════════════════════════════════════════════
@@ -649,7 +651,7 @@
   display:grid;place-items:center;color:#fff;flex:0 0 auto}
 
 /* ── tombol ── */
-#lab .foot{border-top:1px solid var(--ui-ln2);padding:var(--s4);background:var(--ui-sf2);
+#lab .foot{border-top:1px solid var(--ui-ln2);padding:var(--s4);background:var(--ui-sf2);color:var(--mid);
   display:flex;align-items:center;gap:var(--s3);flex-wrap:wrap}
 #lab .btn{display:inline-flex;align-items:center;gap:7px;padding:9px 16px;border-radius:var(--r1);
   font-size:var(--t3);font-weight:650;font-family:var(--font);border:1px solid transparent;
@@ -731,7 +733,7 @@
      sehingga kolom terakhir terpotong. Solusi: tabel jadi blok yang bisa
      digeser sendiri. Catatan: JANGAN pakai white-space:nowrap di sel —
      itu justru melebarkan halaman dari 445px jadi 573px (sudah diuji). */
-  @media(max-width:560px){
+  @media(max-width:640px){
     /* Anak grid/flex bawaannya min-width:auto -> menolak menyusut dan
        memaksa halaman melebar (diukur: .duo > div = 445px di layar 390px).
        min-width:0 membuatnya patuh pada lebar kolom. */
@@ -863,7 +865,7 @@
     <div class="card bd"><h4>🏢 Dari sisi donatur</h4>
       <p>Dana diserahkan, lalu laporan ditunggu dalam bentuk naratif — tanpa kemampuan menelusuri sendiri ke mana dana itu bergerak.</p></div>
     <div class="card bd"><h4>📉 Dari sisi investor</h4>
-      <p>Saat uji tuntas menuju IPO, proses manual tidak hanya merepotkan — ia tercatat sebagai <b style="color:var(--bad)">temuan</b> yang menekan valuasi.</p></div>
+      <p>Saat uji tuntas menuju IPO, proses manual tidak hanya merepotkan — ia tercatat sebagai <b style="color:var(--d-bad)">temuan</b> yang menekan valuasi.</p></div>
   </div>
 
   <div class="g g2" style="margin-top:14px">
@@ -1259,7 +1261,7 @@
         <p>Fitur foto struk tidak punya jalur gagal yang manusiawi. Kalau pelajar lupa memotret, apa konsekuensinya? Menahan biaya hidupnya berarti membuat dia tidak makan. Tidak menahan berarti fiturnya tidak punya gigi.</p>
         <p style="margin-top:6px"><b>Fitur yang tidak punya jawaban untuk jalur gagalnya bukan fitur — itu beban.</b></p></div>
 
-      <div class="ev row"><div class="fig" style="font-size:var(--t5);min-width:84px;color:var(--bad)">15–20%</div>
+      <div class="ev row"><div class="fig" style="font-size:var(--t5);min-width:84px;color:var(--d-bad)">15–20%</div>
         <div><div class="lb" style="margin-bottom:4px">Data yang melawan ambisi IPO</div>
           <p>Biaya per penerima pada model bantuan terikat <b>justru naik</b> seiring skala, sementara model tunai turun 15–20%. Artinya makin besar Eduhub, makin mahal model foto struk — <b>berlawanan dengan rencana pertumbuhan.</b></p>
           <div class="src"><b>Sumber:</b> CALP Network, rangkuman 1.100+ intervensi<div class="srcls"><a class="srcl" href="https://www.calpnetwork.org/publication/show-me-the-money-efficiency-and-effectiveness-in-humanitarian-response" target="_blank" rel="noopener noreferrer">CALP — Show Me the Money: efisiensi respons kemanusiaan ↗</a><a class="srcl" href="https://www.calpnetwork.org/evidence-and-insights/themes/tracking-cash-and-voucher-assistance" target="_blank" rel="noopener noreferrer">CALP — Pelacakan bantuan tunai & voucher ↗</a></div></div></div></div>
@@ -1708,7 +1710,7 @@
       <p>Jejak audit lengkap, dana terpisah sejak awal, bukti berupa tagihan resmi institusi — menggantikan proses manual yang biasanya menjadi temuan saat uji tuntas.</p></div>
     <div class="card wr"><h4>⚠️ Jangka panjang</h4>
       <div style="height:6px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden;margin:9px 0 6px">
-        <i style="display:block;height:100%;width:46%;background:linear-gradient(90deg,var(--warn),var(--bad))"></i></div>
+        <i style="display:block;height:100%;width:46%;background:linear-gradient(90deg,var(--d-warn),var(--d-bad))"></i></div>
       <p>Mesin dana bergulirnya benar, tapi <b>belum ada satu angkatan pun yang lulus → bekerja → mengembalikan.</b> Nol data. Justru ini alasan terkuat membangun sekarang: tiap bulan tanpa sistem = satu bulan data kohort yang hilang selamanya.</p></div>
     <div class="card acc"><h4>✅ Inovasi</h4>
       <div style="height:6px;border-radius:99px;background:rgba(255,255,255,.08);overflow:hidden;margin:9px 0 6px">
@@ -1837,17 +1839,7 @@
     <div id="lab">
 
 
-<div class="bar">
-  <span class="ttl">EduTrust</span>
-  <span class="sub">Clickable Wireframe · v0.1</span>
-  <span class="sp"></span>
-  <button id="bHs">Area klik</button>
-  <button id="bAn">Anotasi</button>
-  <button data-go="map">Peta</button>
-  <button id="bPrev">‹</button>
-  <span class="cnt" id="cnt">—</span>
-  <button id="bNext">›</button>
-</div>
+
 
 <div class="stage">
 
